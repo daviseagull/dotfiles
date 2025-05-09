@@ -10,9 +10,12 @@ export GIT_CONFIG_GLOBAL="${XDG_CONFIG_HOME}/git/config"
 
 # Maven
 export MAVEN_HOME="${XDG_CONFIG_HOME}/maven"
+export MAVEN_SETTINGS="${XDG_CONFIG_HOME}/maven/settings.xml"
 export MAVEN_USER_HOME="${XDG_CONFIG_HOME}/maven"
-export MAVEN_CONFIG="${XDG_CONFIG_HOME}/maven/config"
 
+# JDK
+export JAVA_HOME=$(/usr/libexec/java_home -v 11)
+export PATH="$JAVA_HOME/bin:$PATH"
 
 # NVM
 export NVM_DIR="$XDG_CONFIG_HOME/.nvm"
