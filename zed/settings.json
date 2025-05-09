@@ -22,9 +22,6 @@
   },
   "confirm_quit": true,
   "current_line_highlight": "gutter",
-  "features": {
-    "edit_prediction_provider": "none"
-  },
   "file_types": {
     "Dockerfile": ["Dockerfile.*"]
   },
@@ -66,13 +63,12 @@
     },
     "indent_size": 10
   },
-  "show_edit_predictions": true,
+  "show_edit_predictions": false,
   "scrollbar": {
     "show": "auto"
   },
   "tab_bar": {
-    "show_nav_history_buttons": false,
-    "show_tab_bar_buttons": false
+    "show_nav_history_buttons": false
   },
   "terminal": {
     "blinking": "on",
