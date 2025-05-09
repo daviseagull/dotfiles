@@ -3,7 +3,7 @@ alias personal='cd ~/Developer/personal'
 alias mmscan='cd ~/Developer/MMSCAN'
 
 plugins=(git zsh-syntax-highlighting zsh-autosuggestions)
-source $ZSH/oh-my-zsh.sh
+source $XDG_DATA_HOME/oh-my-zsh/oh-my-zsh.sh
 eval "$(starship init zsh)"
 
 # Private configurations (if they exist)
