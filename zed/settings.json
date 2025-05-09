@@ -1,0 +1,95 @@
+{
+  "agent": {
+    "always_allow_tool_actions": true,
+    "default_profile": "ask",
+    "default_model": {
+      "model": "claude-3-5-sonnet",
+      "provider": "copilot_chat"
+    },
+    "version": "2",
+    "default_width": 450
+  },
+  "auto_indent_on_paste": true,
+  "base_keymap": "VSCode",
+  "buffer_font_family": "Hack Nerd Font",
+  "code_actions_on_format": {
+    "source.organizeImports": true,
+    "source.sortImports": true,
+    "source.removeUnusedImports": true
+  },
+  "collaboration_panel": {
+    "button": false
+  },
+  "confirm_quit": true,
+  "current_line_highlight": "gutter",
+  "features": {
+    "edit_prediction_provider": "none"
+  },
+  "file_types": {
+    "Dockerfile": ["Dockerfile.*"]
+  },
+  "file_scan_exclusions": [
+    "**/.git",
+    "**/.settings",
+    "**/.turbo",
+    "**/.DS_Store",
+    "**/coverage",
+    "**/dist",
+    "**/.angular",
+    "**/node_modules",
+    "**/.aws-sam",
+    "**/tmp"
+  ],
+  "file_scan_inclusions": ["**/.env"],
+  "format_on_save": "on",
+  "formatter": "prettier",
+  "git_panel": {
+    "dock": "left",
+    "default_width": 450
+  },
+  "icon_theme": {
+    "mode": "system",
+    "dark": "Colored Zed Icons Theme Dark",
+    "light": "Colored Zed Icons Theme Light"
+  },
+  "outline_panel": {
+    "button": false
+  },
+  "project_panel": {
+    "default_width": 450,
+    "dock": "left",
+    "scrollbar": {
+      "show": "never"
+    },
+    "indent_guides": {
+      "show": "always"
+    },
+    "indent_size": 10
+  },
+  "show_edit_predictions": true,
+  "scrollbar": {
+    "show": "auto"
+  },
+  "tab_bar": {
+    "show_nav_history_buttons": false,
+    "show_tab_bar_buttons": false
+  },
+  "terminal": {
+    "blinking": "on",
+    "default_height": 300,
+    "font_family": "Hack Nerd Font",
+    "toolbar": {
+      "breadcrumbs": false,
+      "quick_actions": false
+    }
+  },
+  "theme": {
+    "mode": "system",
+    "light": "Catppuccin Latte",
+    "dark": "Catppuccin Frappé"
+  },
+  "toolbar": {
+    "breadcrumbs": false,
+    "quick_actions": false
+  }
+}
