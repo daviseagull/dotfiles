@@ -39,6 +39,9 @@ This repository contains my personal dotfiles and configuration files managed us
 
    # ZSH specific
    export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
+   export HISTFILE="$XDG_STATE_HOME/zsh/history"
+   export ZSH_CACHE_DIR="$XDG_CACHE_HOME/zsh"
+   export ZSH_COMPDUMP="$ZSH_CACHE_DIR/zcompdump-$ZSH_VERSION"
    EOL
 
    ```

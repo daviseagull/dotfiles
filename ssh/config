@@ -1,7 +1,0 @@
-Host *
-    IdentityAgent "${OP_SSH_AGENT}"
-
-Host mmscan
-    HostName "${MMSCAN_DEV_MACHINE}"
-    ForwardAgent yes
-    User ubuntu
