@@ -1,35 +1,48 @@
 {
   "agent": {
     "always_allow_tool_actions": true,
-    "default_profile": "ask",
     "default_model": {
-      "model": "claude-3-5-sonnet",
+      "model": "gpt-4.1",
       "provider": "copilot_chat"
     },
-    "version": "2",
-    "default_width": 450
+    "default_profile": "write",
+    "default_width": 450,
+    "dock": "left",
+    "inline_assistant_model": {
+      "model": "gpt-4.1",
+      "provider": "copilot_chat"
+    }
   },
   "auto_indent_on_paste": true,
+  "autosave": "on_focus_change",
   "base_keymap": "VSCode",
-  "buffer_font_family": "Hack Nerd Font",
+  "buffer_font_family": "JetBrainsMonoNL Nerd Font Propo",
   "code_actions_on_format": {
     "source.organizeImports": true,
-    "source.sortImports": true,
-    "source.removeUnusedImports": true
+    "source.removeUnusedImports": true,
+    "source.sortImports": true
   },
   "collaboration_panel": {
     "button": false
   },
   "confirm_quit": true,
   "current_line_highlight": "gutter",
-  "file_types": {
-    "Dockerfile": ["Dockerfile.*"]
+  "edit_predictions": {
+    "copilot": {
+      "enterprise_uri": null,
+      "proxy": null,
+      "proxy_no_verify": null
+    },
+    "disabled_globs": [],
+    "enabled_in_text_threads": false,
+    "mode": "eager"
   },
   "file_scan_exclusions": [
     "**/.git",
     "**/.settings",
     "**/.turbo",
     "**/.DS_Store",
+    "**/.vscode",
     "**/coverage",
     "**/dist",
     "**/.angular",
@@ -38,51 +51,56 @@
     "**/tmp"
   ],
   "file_scan_inclusions": ["**/.env"],
+  "features": {
+    "edit_prediction_provider": "copilot"
+  },
+  "file_types": {
+    "Dockerfile": ["Dockerfile.*"]
+  },
   "format_on_save": "on",
   "formatter": "prettier",
   "git_panel": {
-    "dock": "left",
-    "default_width": 450
+    "default_width": 250,
+    "dock": "left"
   },
   "icon_theme": {
-    "mode": "system",
     "dark": "Colored Zed Icons Theme Dark",
-    "light": "Colored Zed Icons Theme Light"
+    "light": "Colored Zed Icons Theme Light",
+    "mode": "system"
   },
   "outline_panel": {
     "button": false
   },
   "project_panel": {
-    "default_width": 450,
-    "dock": "left",
+    "default_width": 350,
+    "dock": "right",
+    "indent_size": 12,
     "scrollbar": {
       "show": "never"
-    },
-    "indent_guides": {
-      "show": "always"
-    },
-    "indent_size": 10
+    }
   },
-  "show_edit_predictions": false,
   "scrollbar": {
     "show": "auto"
   },
+  "search": {
+    "button": false
+  },
+  "show_edit_predictions": true,
   "tab_bar": {
     "show_nav_history_buttons": false
   },
   "terminal": {
     "blinking": "on",
     "default_height": 300,
-    "font_family": "Hack Nerd Font",
+    "font_family": "JetBrainsMonoNL Nerd Font Propo",
     "toolbar": {
-      "breadcrumbs": false,
-      "quick_actions": false
+      "breadcrumbs": false
     }
   },
   "theme": {
-    "mode": "system",
+    "dark": "Catppuccin Mocha",
     "light": "Catppuccin Latte",
-    "dark": "Catppuccin Frappé"
+    "mode": "system"
   },
   "toolbar": {
     "breadcrumbs": false,

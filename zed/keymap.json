@@ -9,6 +9,7 @@
   {
     "context": "Workspace",
     "bindings": {
+      "cmd-shift-a": "agent::ToggleFocus"
       // "shift shift": "file_finder::Toggle"
     }
   },

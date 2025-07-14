@@ -1,3 +1,4 @@
 --target=~/.config
+--ignore=aws
 --ignore=.stowrc
 --ignore=DS_STORE

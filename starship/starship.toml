@@ -8,14 +8,11 @@ $fill\
 $git_branch\
 $git_status\
 $nodejs\
-$rust\
-$package\
-$aws\
-$docker_context\
 $jobs\
 $cmd_duration\
 $line_break\
-$character"""
+$character\
+"""
 
 add_newline = true
 
@@ -27,7 +24,10 @@ format = '[$path ]($style)'
 symbol = ' '
 
 [git_branch]
-format="[$symbol$branch(:$remote_branch)]($style) "
+format = '[$symbol$branch]($style) '
+
+[git_status]
+format = '([$all_status]($style)) '
 
 [nodejs]
 style = 'bold green'
