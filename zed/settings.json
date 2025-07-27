@@ -1,8 +1,9 @@
 {
   "agent": {
+    "play_sound_when_agent_done": true,
     "always_allow_tool_actions": true,
     "default_model": {
-      "model": "gpt-4.1",
+      "model": "gpt-4o",
       "provider": "copilot_chat"
     },
     "default_profile": "write",
@@ -28,14 +29,10 @@
   "confirm_quit": true,
   "current_line_highlight": "gutter",
   "edit_predictions": {
-    "copilot": {
-      "enterprise_uri": null,
-      "proxy": null,
-      "proxy_no_verify": null
-    },
-    "disabled_globs": [],
-    "enabled_in_text_threads": false,
-    "mode": "eager"
+    "mode": "subtle"
+  },
+  "features": {
+    "edit_prediction_provider": "zed"
   },
   "file_scan_exclusions": [
     "**/.git",
@@ -51,9 +48,6 @@
     "**/tmp"
   ],
   "file_scan_inclusions": ["**/.env"],
-  "features": {
-    "edit_prediction_provider": "copilot"
-  },
   "file_types": {
     "Dockerfile": ["Dockerfile.*"]
   },
@@ -67,6 +61,9 @@
     "dark": "Colored Zed Icons Theme Dark",
     "light": "Colored Zed Icons Theme Light",
     "mode": "system"
+  },
+  "notification_panel": {
+    "button": false
   },
   "outline_panel": {
     "button": false
@@ -92,14 +89,15 @@
   "terminal": {
     "blinking": "on",
     "default_height": 300,
+    "dock": "bottom",
     "font_family": "JetBrainsMonoNL Nerd Font Propo",
     "toolbar": {
       "breadcrumbs": false
     }
   },
   "theme": {
-    "dark": "Catppuccin Mocha",
-    "light": "Catppuccin Latte",
+    "dark": "Vercel Dark",
+    "light": "Vercel Light",
     "mode": "system"
   },
   "toolbar": {
