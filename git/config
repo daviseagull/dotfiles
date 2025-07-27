@@ -1,0 +1,23 @@
+# This is Git's per-user configuration file.
+[user]
+	name = "Davi Seagull"
+	email = "daviseagull@icloud.com"
+	signingkey = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDEiS1niPZo/6UW060A1E3In8fpbZai+QEn+LC4/loBr"
+
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+
+[push]
+	autoSetupRemote = true
+
+[gpg]
+  format = ssh
+
+[gpg "ssh"]
+  program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
+
+[commit]
+  gpgsign = true
