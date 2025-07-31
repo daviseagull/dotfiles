@@ -11,6 +11,21 @@ return {
       window = {
         position = "right",
       },
+      default_component_configs = {
+        git_status = {
+          symbols = {
+            added = "✚",
+            deleted = "✖",
+            modified = "",
+            renamed = "󰁕",
+            untracked = "",
+            ignored = "",
+            unstaged = "",
+            staged = "",
+            conflict = "",
+          },
+        },
+      },
     },
   },
 }
