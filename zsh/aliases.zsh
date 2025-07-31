@@ -1,3 +1,2 @@
-alias dev='cd ~/Developer'
-alias personal='cd ~/Developer/personal'
-alias mmscan='cd ~/Developer/mmscan'
+alias n='nvim'
+alias create-tmux-session='/Users/seagull/Developer/personal/dotfiles/scripts/create-tmux-dev-session.sh'

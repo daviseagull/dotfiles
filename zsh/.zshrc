@@ -8,3 +8,4 @@
 plugins=(git zsh-syntax-highlighting zsh-autosuggestions)
 source $XDG_DATA_HOME/oh-my-zsh/oh-my-zsh.sh
 eval "$(starship init zsh)"
+eval "$(zoxide init zsh)"
