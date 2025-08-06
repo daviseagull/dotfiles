@@ -7,4 +7,10 @@ return {
       -- vim.cmd("colorscheme rose-pine-moon")
     end,
   },
+  {
+      "LazyVim/LazyVim",
+      opts = {
+        colorscheme = "rose-pine-dawn",
+      },
+    }
 }

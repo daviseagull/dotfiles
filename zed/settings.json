@@ -3,7 +3,7 @@
     "play_sound_when_agent_done": true,
     "always_allow_tool_actions": true,
     "default_model": {
-      "model": "gpt-4o",
+      "model": "claude-sonnet-4",
       "provider": "copilot_chat"
     },
     "default_profile": "write",
@@ -41,7 +41,7 @@
     "**/.DS_Store",
     "**/.vscode",
     "**/coverage",
-    "**/dist",
+    // "**/dist",
     "**/.angular",
     "**/node_modules",
     "**/.aws-sam",
