@@ -1,6 +1,6 @@
 # Theme configuration
-theme = dark:rose-pine-moon,light:rose-pine-dawn
-# theme = rose-pine-moon
+# theme = dark:rose-pine-moon,light:rose-pine-dawn
+theme = rose-pine-moon
 
 # Font configuration for optimal quality
 font-family = "JetBrains Mono NL"

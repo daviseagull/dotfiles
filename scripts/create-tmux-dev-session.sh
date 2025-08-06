@@ -14,9 +14,13 @@ PROJECT_DIR="$(pwd)" # Always uses current directory
 START_FRONTEND=false
 
 # Check for frontend flag
-if [ "$2" = "--with-frontend" ]; then
-  START_FRONTEND=true
-fi
+for arg in "$@"; do
+  if [ "$arg" = "--with-frontend" ]; then
+    START_FRONTEND=true
+    break
+  fi
+done
+
 
 # Check if session already exists
 if tmux has-session -t "$SESSION_NAME" 2>/dev/null; then
@@ -39,16 +43,35 @@ tmux new-window -t "$SESSION_NAME" -n "servers" -c "$PROJECT_DIR"
 # Split the servers window horizontally (creates 2 panes)
 tmux split-window -t "$SESSION_NAME:servers" -h -c "$PROJECT_DIR"
 
-# Send command to the left pane (pane 0)
-tmux send-keys -t "$SESSION_NAME:servers.left" "pnpm start:local" Enter
-
-# Send command to the right pane (pane 1)
+# Configure left pane based on frontend flag
 if [ "$START_FRONTEND" = true ]; then
-  tmux send-keys -t "$SESSION_NAME:servers.right" "pnpm start:web" Enter
+  # Get the first pane ID (left pane) and split it vertically
+  FIRST_PANE=$(tmux list-panes -t "$SESSION_NAME:servers" -F "#{pane_id}" | head -n 1)
+  tmux split-window -t "$FIRST_PANE" -v -c "$PROJECT_DIR"
 
-  tmux select-pane -t "$SESSION_NAME:servers.right"
-
-  tmux split-window -v
+  # Get all pane IDs and name them
+  IFS=$'\n' read -r -d '' -a PANE_IDS < <(tmux list-panes -t "$SESSION_NAME:servers" -F "#{pane_id}" && printf '\0')
+  if [ ${#PANE_IDS[@]} -ge 3 ]; then
+    tmux select-pane -t "${PANE_IDS[0]}" -T "backend"
+    tmux select-pane -t "${PANE_IDS[1]}" -T "frontend"
+    tmux select-pane -t "${PANE_IDS[2]}" -T "claude"
+    
+    # Send commands to panes
+    tmux send-keys -t "${PANE_IDS[0]}" "pnpm start:local" Enter
+    tmux send-keys -t "${PANE_IDS[1]}" "pnpm start:web" Enter
+    tmux send-keys -t "${PANE_IDS[2]}" "claude" Enter
+  fi
+else
+  # Get pane IDs for 2-pane layout
+  IFS=$'\n' read -r -d '' -a PANE_IDS < <(tmux list-panes -t "$SESSION_NAME:servers" -F "#{pane_id}" && printf '\0')
+  if [ ${#PANE_IDS[@]} -ge 2 ]; then
+    tmux select-pane -t "${PANE_IDS[0]}" -T "backend"
+    tmux select-pane -t "${PANE_IDS[1]}" -T "claude"
+    
+    # Send commands to panes
+    tmux send-keys -t "${PANE_IDS[0]}" "pnpm start:local" Enter
+    tmux send-keys -t "${PANE_IDS[1]}" "claude" Enter
+  fi
 fi
 
 # Set focus to the editor window
