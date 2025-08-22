@@ -32,3 +32,6 @@ eval "$(pyenv init - zsh)"
 
 # AWS SAM
 export SAM_CLI_TELEMETRY=0
+
+# PATH
+export PATH="$HOME/.local/bin:$PATH"

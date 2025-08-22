@@ -1,6 +1,9 @@
+# Keybinds
+keybind = global:ctrl+grave_accent=toggle_quick_terminal
+
 # Theme configuration
 # theme = dark:rose-pine-moon,light:rose-pine-dawn
-theme = rose-pine-moon
+theme = rose-pine-dawn
 
 # Font configuration for optimal quality
 font-family = "JetBrains Mono NL"
@@ -47,9 +50,12 @@ background-opacity = 0.98
 background-blur-radius = 20
 
 # Shell integration
-shell-integration = detect
-shell-integration-features = cursor,sudo
+# shell-integration = detect
+# shell-integration-features = cursor,sudo
+
 
 # Mouse and interaction
 mouse-hide-while-typing = true
 copy-on-select = clipboard
+
+keybind = shift+enter=text:\n

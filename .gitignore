@@ -3,3 +3,5 @@ aws/credentials
 zsh/private.zsh
 zsh/.zsh_history
 zsh/.zsh_sessions
+
+nushell/history*
