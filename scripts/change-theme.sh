@@ -1,31 +1,34 @@
 #!/bin/bash
 
 # Theme switcher for Ghostty, TMUX, and NeoVim
-# Rose Pine theme variants
+# Supports Catppuccin theme variants
 
 set -e
 
 DOTFILES_DIR="$HOME/Developer/personal/dotfiles"
 GHOSTTY_CONFIG="$DOTFILES_DIR/ghostty/config"
 TMUX_CONFIG="$DOTFILES_DIR/tmux/tmux.conf"
-NVIM_THEME_CONFIG="$DOTFILES_DIR/nvim/lua/plugins/rose-pine.lua"
+NVIM_THEME_CONFIG="$DOTFILES_DIR/nvim/lua/plugins/catppuccin.lua"
 
 # Function to get theme configuration
 get_theme_config() {
     case $1 in
-        "rose-pine-main") echo "rose-pine,main,rose-pine" ;;
-        "rose-pine-moon") echo "rose-pine-moon,moon,rose-pine-moon" ;;
-        "rose-pine-dawn") echo "rose-pine-dawn,dawn,rose-pine-dawn" ;;
+        # Catppuccin themes
+        "catppuccin-latte") echo "catppuccin-latte,latte,catppuccin-latte" ;;
+        "catppuccin-frappe") echo "catppuccin-frappe,frappe,catppuccin-frappe" ;;
+        "catppuccin-macchiato") echo "catppuccin-macchiato,macchiato,catppuccin-macchiato" ;;
+        "catppuccin-mocha") echo "catppuccin-mocha,mocha,catppuccin-mocha" ;;
         *) echo "" ;;
     esac
 }
 
 # Function to show available themes
 show_themes() {
-    echo "Available Rose Pine themes:"
-    echo "  1) rose-pine-main"
-    echo "  2) rose-pine-moon" 
-    echo "  3) rose-pine-dawn"
+    echo "Available Catppuccin themes:"
+    echo "  1) catppuccin-latte (light)"
+    echo "  2) catppuccin-frappe (dark)"
+    echo "  3) catppuccin-macchiato (dark)"
+    echo "  4) catppuccin-mocha (dark)"
     echo
 }
 
@@ -39,8 +42,8 @@ update_ghostty_theme() {
 # Function to update TMUX theme
 update_tmux_theme() {
     local variant=$1
-    echo "Updating TMUX theme to rose-pine ($variant)"
-    sed -i '' "s/@rose_pine_variant '[^']*'/@rose_pine_variant '$variant'/" "$TMUX_CONFIG"
+    echo "Updating TMUX theme to catppuccin ($variant)"
+    sed -i '' "s/@catppuccin_flavour '[^']*'/@catppuccin_flavour '$variant'/" "$TMUX_CONFIG"
 }
 
 # Function to update NeoVim theme
@@ -81,9 +84,10 @@ main() {
         read -r selection
         
         case $selection in
-            1) selected_theme="rose-pine-main" ;;
-            2) selected_theme="rose-pine-moon" ;;
-            3) selected_theme="rose-pine-dawn" ;;
+            1) selected_theme="catppuccin-latte" ;;
+            2) selected_theme="catppuccin-frappe" ;;
+            3) selected_theme="catppuccin-macchiato" ;;
+            4) selected_theme="catppuccin-mocha" ;;
             *) selected_theme="$selection" ;;
         esac
     else

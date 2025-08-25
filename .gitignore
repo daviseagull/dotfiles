@@ -5,3 +5,6 @@ zsh/.zsh_history
 zsh/.zsh_sessions
 
 nushell/history*
+
+tmux/plugins/*
+CLAUDE.md

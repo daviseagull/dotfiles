@@ -97,8 +97,8 @@
     }
   },
   "theme": {
-    "dark": "One Dark",
-    "light": "Rosé Pine Dawn",
+    "dark": "Catppuccin Mocha",
+    "light": "Catppuccin Latte",
     "mode": "system"
   },
   "toolbar": {

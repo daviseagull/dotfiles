@@ -23,12 +23,14 @@ require("lazy").setup({
     lazy = false,
     version = false,
   },
+  install = { colorscheme = { "catppuccin" } },
   checker = {
     enabled = true,
     notify = false,
   },
   performance = {
     rtp = {
+
       disabled_plugins = {
         "gzip",
         "tarPlugin",

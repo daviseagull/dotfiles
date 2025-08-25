@@ -1,14 +1,14 @@
-local keymap = vim.keymap.set
-local opts = { noremap = true, silent = true }
+-- Disable arrow keys
+vim.keymap.set("n", "<left>", '<cmd>echo "Use h to move!!"<CR>')
+vim.keymap.set("n", "<right>", '<cmd>echo "Use l to move!!"<CR>')
+vim.keymap.set("n", "<up>", '<cmd>echo "Use k to move!!"<CR>')
+vim.keymap.set("n", "<down>", '<cmd>echo "Use j to move!!"<CR>')
 
-local function arrow_key_warning()
-  vim.notify("Use hjkl, not arrow keys!", vim.log.levels.WARN)
-end
+-- System clipboard keybinds (explicit access only)
+vim.keymap.set({ "n", "v" }, "<leader>sy", '"+y', { desc = "Copy to system clipboard" })
+vim.keymap.set("n", "<leader>sY", '"+Y', { desc = "Copy line to system clipboard" })
 
--- Disable arrow keys in normal, insert, and visual mode with warning
-for _, mode in ipairs({ "n", "i", "v" }) do
-  keymap(mode, "<Up>", arrow_key_warning, opts)
-  keymap(mode, "<Down>", arrow_key_warning, opts)
-  keymap(mode, "<Left>", arrow_key_warning, opts)
-  keymap(mode, "<Right>", arrow_key_warning, opts)
-end
+vim.keymap.set("v", "<leader>sx", '"+x', { desc = "Cut to system clipboard" })
+
+vim.keymap.set({ "n", "v" }, "<leader>sp", '"+p', { desc = "Paste from system clipboard" })
+vim.keymap.set({ "n", "v" }, "<leader>sP", '"+P', { desc = "Paste from system clipboard before cursor" })
