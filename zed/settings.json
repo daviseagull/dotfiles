@@ -41,7 +41,7 @@
     "**/.DS_Store",
     "**/.vscode",
     "**/coverage",
-    "**/dist",
+    // "**/dist",
     "**/.angular",
     "**/target",
     "**/node_modules",

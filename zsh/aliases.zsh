@@ -1,4 +1,5 @@
 alias n='nvim'
-alias t='tmux'
+alias t='tmux -f ~/.config/tmux/tmux.conf'
+alias tmux='tmux -f ~/.config/tmux/tmux.conf'
 alias create-tmux-session='/Users/seagull/Developer/personal/dotfiles/scripts/create-tmux-dev-session.sh'
 alias change-theme='/Users/seagull/Developer/personal/dotfiles/scripts/change-theme.sh'

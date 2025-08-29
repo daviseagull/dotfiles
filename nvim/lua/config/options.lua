@@ -1,7 +1,33 @@
--- Options are automatically loaded before lazy.nvim startup
--- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
--- Add any additional options here
+vim.g.mapleader = " "
+vim.g.maplocalleader = "\\"
 
--- Disable automatic system clipboard integration
--- Override LazyVim's default clipboard="unnamedplus" setting
-vim.opt.clipboard = ""
+vim.diagnostic.config({ virtual_text = true })
+
+local opt = vim.opt
+
+opt.number = true
+opt.relativenumber = true
+
+-- UI
+opt.number = true
+opt.relativenumber = true
+opt.signcolumn = "yes"
+opt.cursorline = true
+opt.termguicolors = true
+
+-- Editing
+opt.expandtab = true
+opt.shiftwidth = 2
+opt.tabstop = 2
+opt.smartindent = true
+opt.wrap = false
+
+-- Search
+opt.ignorecase = true
+opt.smartcase = true
+opt.hlsearch = false
+opt.incsearch = true
+
+-- Completion
+opt.completeopt = "menu,menuone,noselect"
+opt.pumheight = 10

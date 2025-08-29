@@ -4,7 +4,7 @@ keybind = shift+enter=text:\n
 
 # Theme configuration
 # theme = dark:catppuccin-mocha,light:catppuccin-latte
-theme = catppuccin-mocha
+theme = catppuccin-latte
 
 # Font configuration for optimal quality
 font-family = "Fira Code"
