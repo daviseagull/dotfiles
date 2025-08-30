@@ -25,6 +25,8 @@ return {
 				position = "right",
 				mappings = {
 					["<space>"] = "none",
+					["l"] = "open",
+					["h"] = "close_node",
 					["Y"] = {
 						function(state)
 							local node = state.tree:get_node()
