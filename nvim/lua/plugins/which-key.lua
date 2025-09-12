@@ -13,7 +13,6 @@ return {
 					{ "<leader><tab>", group = "Tabs" },
 					{ "<leader>b", group = "Buffers" },
 					{ "<leader>c", group = "Code" },
-					{ "<leader>f", group = "Files" },
 					{ "<leader>g", group = "Git", mode = { "n", "v" } },
 					{ "<leader>q", group = "Quit/Session" },
 					{ "<leader>r", group = "Rename" },

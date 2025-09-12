@@ -8,12 +8,6 @@ return {
 			"<cmd>FzfLua files<cr>",
 			desc = "Find Files (Root Dir)",
 		},
-		{
-			"<leader>ff",
-			"<cmd>FzfLua files<cr>",
-			desc = "Find Files (Root Dir)",
-		},
-		{ "<leader>fr", "<cmd>FzfLua oldfiles<cr>", desc = "Recent" },
 
 		-- Search
 		{
