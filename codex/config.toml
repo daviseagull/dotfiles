@@ -1,0 +1,9 @@
+[projects."/Users/seagull/Developer/mmscan/infosys-infrastructure"]
+trust_level = "trusted"
+
+[projects."/Users/seagull/Developer/mmscan/infosys-mmscan-api"]
+trust_level = "trusted"
+
+[projects."/Users/seagull/Developer/personal/dotfiles"]
+trust_level = "trusted"
+# OpenAI Codex CLI Configuration
