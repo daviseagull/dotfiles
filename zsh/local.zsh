@@ -4,6 +4,9 @@ export STARSHIP_CONFIG="${XDG_CONFIG_HOME}/starship/starship.toml"
 # GIT
 export GIT_CONFIG_GLOBAL="${XDG_CONFIG_HOME}/git/config"
 
+# CODEX
+export CODEX_HOME="${XDG_CONFIG_HOME}/codex"
+
 # MAVEN
 export MAVEN_HOME="${XDG_CONFIG_HOME}/maven"
 export MAVEN_SETTINGS="${XDG_CONFIG_HOME}/maven/settings.xml"

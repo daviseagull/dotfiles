@@ -9,6 +9,7 @@ codex/version.json
 zsh/private.zsh
 zsh/.zsh_history
 zsh/.zsh_sessions
+zsh/.zcompdump
 
 nushell/history*
 
