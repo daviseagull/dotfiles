@@ -11,7 +11,7 @@ font-family = "Fira Code"
 font-size = 16
 
 # Font rendering enhancements
-font-feature = +liga,+calt,+ss01,+ss02
+font-feature = -calt,-liga,-dlig
 font-variation = wght=400
 font-thicken = true
 
