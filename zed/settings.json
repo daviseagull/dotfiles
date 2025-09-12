@@ -1,23 +1,16 @@
 {
   "agent": {
-    "play_sound_when_agent_done": true,
-    "always_allow_tool_actions": true,
     "default_model": {
-      "model": "gpt-4.1",
-      "provider": "copilot_chat"
+      "provider": "copilot_chat",
+      "model": "gpt-5-mini"
     },
     "default_profile": "write",
-    "default_width": 450,
+    "always_allow_tool_actions": true,
     "dock": "left",
-    "inline_assistant_model": {
-      "model": "gpt-4.1",
-      "provider": "copilot_chat"
-    }
+    "play_sound_when_agent_done": true
   },
-  "auto_indent_on_paste": true,
-  "autosave": "on_focus_change",
   "base_keymap": "VSCode",
-  "buffer_font_family": "JetBrainsMonoNL Nerd Font Propo",
+  "buffer_font_size": 16,
   "code_actions_on_format": {
     "source.organizeImports": true,
     "source.removeUnusedImports": true,
@@ -31,32 +24,33 @@
   "edit_predictions": {
     "mode": "subtle"
   },
+  "file_scan_inclusions": ["**/.env"],
   "features": {
-    "edit_prediction_provider": "zed"
+    "edit_prediction_provider": "copilot"
   },
   "file_scan_exclusions": [
+    "**/.claude",
+    "**/.ropeproject",
+    "**/.ruff_cache",
     "**/.git",
     "**/.settings",
     "**/.turbo",
+    "**/.pytest_cache",
     "**/.DS_Store",
     "**/.vscode",
+    "**/__pycache__",
     "**/coverage",
-    // "**/dist",
+    "**/dist",
     "**/.angular",
     "**/target",
+    "**/.terraform",
     "**/node_modules",
     "**/.aws-sam",
     "**/tmp"
   ],
-  "file_scan_inclusions": ["**/.env"],
-  "file_types": {
-    "Dockerfile": ["Dockerfile.*"]
-  },
   "format_on_save": "on",
-  "formatter": "prettier",
   "git_panel": {
-    "default_width": 250,
-    "dock": "left"
+    "button": false
   },
   "icon_theme": {
     "dark": "Colored Zed Icons Theme Dark",
@@ -70,28 +64,21 @@
     "button": false
   },
   "project_panel": {
-    "default_width": 350,
-    "dock": "right",
-    "indent_size": 12,
-    "scrollbar": {
-      "show": "never"
-    }
-  },
-  "scrollbar": {
-    "show": "auto"
+    "dock": "right"
   },
   "search": {
     "button": false
   },
-  "show_edit_predictions": true,
   "tab_bar": {
-    "show_nav_history_buttons": false
+    "show_nav_history_buttons": false,
+    "show_tab_bar_buttons": false
+  },
+  "telemetry": {
+    "diagnostics": true,
+    "metrics": true
   },
   "terminal": {
-    "blinking": "on",
-    "default_height": 300,
-    "dock": "bottom",
-    "font_family": "JetBrainsMonoNL Nerd Font Propo",
+    "font_family": "Fira Code",
     "toolbar": {
       "breadcrumbs": false
     }
@@ -104,5 +91,11 @@
   "toolbar": {
     "breadcrumbs": false,
     "quick_actions": false
-  }
+  },
+  "ui_font_size": 16
+  // "vim": {
+  //   // "toggle_relative_line_numbers": true,
+  //   "use_system_clipboard": "never"
+  // },
+  // "vim_mode": true
 }
