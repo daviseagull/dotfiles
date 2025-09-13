@@ -3,7 +3,7 @@ keybind = global:ctrl+grave_accent=toggle_quick_terminal
 keybind = shift+enter=text:\n
 
 # Theme configuration
-theme = catppuccin-mocha
+theme = catppuccin-latte
 
 # Font configuration for optimal quality
 font-family = "Fira Code"
@@ -14,18 +14,7 @@ font-feature = -calt,-liga,-dlig
 font-variation = wght=400
 font-thicken = true
 
-# Advanced font rendering options
-font-codepoint-map = U+E0A0-U+E0A3=JetBrainsMonoNL Nerd Font Propo
-font-codepoint-map = U+E0B0-U+E0B3=JetBrainsMonoNL Nerd Font Propo
-font-codepoint-map = U+E0C0-U+E0C8=JetBrainsMonoNL Nerd Font Propo
-font-codepoint-map = U+E0CA-U+E0CA=JetBrainsMonoNL Nerd Font Propo
-font-codepoint-map = U+E0CC-U+E0D4=JetBrainsMonoNL Nerd Font Propo
-
 # Window and visual appearance
-window-padding-x = 8
-window-padding-y = 8
-window-decoration = true
-window-title-font-family = system
 title = "Ghostty"
 
 # macOS specific enhancements
@@ -34,26 +23,20 @@ macos-non-native-fullscreen = false
 macos-option-as-alt = true
 
 # Scrollback and performance
-scrollback-limit = 10000
+# scrollback-limit = 10000
 
 # Cursor configuration
-cursor-style = block
-cursor-style-blink = true
+# cursor-style = block
+#cursor-style-blink = true
 
 # Text rendering quality
-adjust-cursor-thickness = 1
-adjust-underline-thickness = 150%
-adjust-underline-position = 2
+# adjust-cursor-thickness = 1
+# adjust-underline-thickness = 150%
+# adjust-underline-position = 2
 
 # Background and transparency (optional)
 background-opacity = 0.98
 background-blur-radius = 20
 
-# Shell integration
-# shell-integration = detect
-# shell-integration-features = cursor,sudo
-
-
 # Mouse and interaction
 mouse-hide-while-typing = true
-copy-on-select = clipboard
