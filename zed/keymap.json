@@ -11,5 +11,10 @@
     "bindings": {
       "cmd-g": ["task::Spawn", { "task_name": "start lazygit" }]
     }
+  },
+  {
+    "bindings": {
+      "cmd-alt-g": ["agent::NewExternalAgentThread", { "agent": "claude_code" }]
+    }
   }
 ]

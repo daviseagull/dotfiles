@@ -1,3 +1,5 @@
 alias lg='lazygit'
 
-alias create-tmux-session='/Users/seagull/Developer/personal/dotfiles/scripts/create-tmux-dev-session.sh'
+alias ll='ls -lh'
+alias la='ls -lAh'
+alias ls='ls --color=auto'
