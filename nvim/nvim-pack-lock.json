@@ -1,0 +1,35 @@
+{
+  "plugins": {
+    "LuaSnip": [],
+    "blink.cmp": {
+      "version": "'1.*'"
+    },
+    "conform.nvim": [],
+    "friendly-snippets": [],
+    "fzf-lua": [],
+    "gitsigns.nvim": {
+      "rev": "1ee5c1f",
+      "src": "https://github.com/lewis6991/gitsigns.nvim"
+    },
+    "lazygit.nvim": [],
+    "lualine.nvim": {
+      "rev": "b8c2315",
+      "src": "https://github.com/nvim-lualine/lualine.nvim"
+    },
+    "mini.nvim": [],
+    "monokai-pro.nvim": {
+      "rev": "1ac671f",
+      "src": "https://github.com/loctvl842/monokai-pro.nvim"
+    },
+    "neo-tree.nvim": [],
+    "nui.nvim": [],
+    "nvim-lspconfig": [],
+    "nvim-treesitter": [],
+    "plenary.nvim": [],
+    "trouble.nvim": [],
+    "which-key.nvim": {
+      "rev": "904308e",
+      "src": "https://github.com/folke/which-key.nvim"
+    }
+  }
+}
