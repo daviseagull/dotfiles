@@ -1,9 +1,7 @@
 {
   "plugins": {
     "LuaSnip": [],
-    "blink.cmp": {
-      "version": "'1.*'"
-    },
+    "blink.cmp": [],
     "conform.nvim": [],
     "friendly-snippets": [],
     "fzf-lua": [],

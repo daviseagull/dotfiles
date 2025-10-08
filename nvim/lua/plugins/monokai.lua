@@ -12,14 +12,13 @@ require("monokai-pro").setup({
     annotation = { italic = true },
     tag_attribute = { italic = true }, -- attribute of tag in reactjs
   },
-  filter = "pro", -- classic | octagon | pro | machine | ristretto | spectrum
-  -- Enable this will disable filter option
+  filter = "pro",                      -- classic | octagon | pro | machine | ristretto | spectrum
   day_night = {
-    enable = false,            -- turn off by default
-    day_filter = "pro",        -- classic | octagon | pro | machine | ristretto | spectrum
-    night_filter = "spectrum", -- classic | octagon | pro | machine | ristretto | spectrum
+    enable = false,                    -- turn off by default
+    day_filter = "pro",                -- classic | octagon | pro | machine | ristretto | spectrum
+    night_filter = "spectrum",         -- classic | octagon | pro | machine | ristretto | spectrum
   },
-  inc_search = "background", -- underline | background
+  inc_search = "background",           -- underline | background
   plugins = {
     bufferline = {
       underline_selected = false,

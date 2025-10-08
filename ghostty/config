@@ -3,7 +3,7 @@ keybind = global:ctrl+grave_accent=toggle_quick_terminal
 keybind = shift+enter=text:\n
 
 # Theme configuration
-theme = Gruvbox Dark
+theme = Monokai Pro
 
 # Font configuration for optimal quality
 font-family = "Fira Code"
