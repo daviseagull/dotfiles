@@ -3,10 +3,10 @@ keybind = global:ctrl+grave_accent=toggle_quick_terminal
 keybind = shift+enter=text:\n
 
 # Theme configuration
-theme = Monokai Pro
+theme = Rose Pine Moon
 
 # Font configuration for optimal quality
-font-family = "Fira Code"
+font-family = "Maple Mono NF"
 font-size = 16
 font-feature = -calt,-liga,-dlig
 

@@ -5,7 +5,8 @@ require("neo-tree").setup({
     bind_to_cwd = false,
     follow_current_file = { enabled = true },
     use_libuv_file_watcher = true,
-    group_empty_dirs = true,
+    enable_git_status = true,
+    enable_diagnostics = true,
   },
   window = {
     position = "right",

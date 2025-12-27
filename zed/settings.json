@@ -1,107 +1,84 @@
 {
+  "agent_ui_font_size": 16.0,
   "agent": {
     "default_model": {
       "provider": "copilot_chat",
-      "model": "gpt-5-mini"
+      "model": "claude-sonnet-4",
     },
-    "default_profile": "ask",
-    "always_allow_tool_actions": true,
-    "dock": "left",
-    "play_sound_when_agent_done": true
+    "model_parameters": [],
   },
-  "base_keymap": "VSCode",
-  "buffer_font_size": 14,
+  "colorize_brackets": true,
+  // "vim_mode": true,
+  "file_scan_exclusions": [
+    "node_modules",
+    "dist",
+    ".claude",
+    ".turbo",
+    "build",
+    ".git",
+    "coverage",
+    ".angular",
+    ".gradle",
+    "target",
+  ],
   "code_actions_on_format": {
     "source.organizeImports": true,
     "source.removeUnusedImports": true,
-    "source.sortImports": true
+    "source.sortImports": true,
   },
+  "features": {
+    "edit_prediction_provider": "copilot",
+  },
+  "base_keymap": "VSCode",
+  "buffer_font_size": 16.0,
   "collaboration_panel": {
-    "button": false
+    "button": false,
   },
   "confirm_quit": true,
   "current_line_highlight": "gutter",
   "edit_predictions": {
-    "mode": "subtle"
+    "mode": "subtle",
   },
   "file_scan_inclusions": ["**/.env"],
-  "features": {
-    "edit_prediction_provider": "copilot"
-  },
   "buffer_font_features": {
-    "calt": false
+    "calt": false,
   },
-  "file_scan_exclusions": [
-    "**/.gradle",
-    "**/.idea",
-    "**/build",
-    "**/build-cache",
-    "**/bin",
-    "**/.classpath",
-    "**/.project",
-    "**/.claude",
-    "**/.ropeproject",
-    "**/.ruff_cache",
-    "**/.git",
-    "**/.settings",
-    "**/.turbo",
-    "**/.pytest_cache",
-    "**/.DS_Store",
-    "**/.vscode",
-    "**/__pycache__",
-    "**/coverage",
-    "**/dist",
-    "**/.angular",
-    "**/target",
-    "**/.terraform",
-    "**/node_modules",
-    "**/.aws-sam",
-    "**/tmp"
-  ],
   "format_on_save": "on",
-  "git_panel": {
-    "button": false
-  },
-  "icon_theme": {
-    "dark": "Colored Zed Icons Theme Dark",
-    "light": "Colored Zed Icons Theme Light",
-    "mode": "system"
-  },
   "notification_panel": {
-    "button": false
+    "button": false,
   },
   "outline_panel": {
-    "button": false
+    "button": false,
   },
   "project_panel": {
-    "dock": "right"
-    // "auto_fold_dirs": false
+    "hide_gitignore": false,
+    "dock": "right",
   },
   "search": {
-    "button": false
+    "button": false,
   },
   "tab_bar": {
     "show_nav_history_buttons": false,
-    "show_tab_bar_buttons": false
+    "show_tab_bar_buttons": false,
   },
   "telemetry": {
     "diagnostics": true,
-    "metrics": true
+    "metrics": true,
   },
   "terminal": {
     "font_family": "JetBrainsMono Nerd Font Mono",
     "toolbar": {
-      "breadcrumbs": false
-    }
+      "breadcrumbs": false,
+    },
   },
   "theme": {
-    "dark": "Ayu Mirage",
-    "light": "Ayu Light",
-    "mode": "system"
+    "dark": "Zedokai",
+    "light": "Rosé Pine Dawn",
+    "mode": "light",
   },
   "toolbar": {
     "breadcrumbs": false,
-    "quick_actions": false
+    "quick_actions": false,
   },
-  "ui_font_size": 16
+  "ui_font_size": 16.0,
 }

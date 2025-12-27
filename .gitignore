@@ -10,6 +10,7 @@ zsh/private.zsh
 zsh/.zsh_history
 zsh/.zsh_sessions
 zsh/.zcompdump
+zsh/ohmyzsh/*
 
 nushell/history*
 

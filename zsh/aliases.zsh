@@ -1,5 +1,5 @@
 alias lg='lazygit'
-
-alias ll='ls -lh'
-alias la='ls -lAh'
-alias ls='ls --color=auto'
+alias cts='/Users/seagull/Developer/personal/dotfiles/scripts/create-tmux-session.sh'
+alias tf='terraform'
+alias oc='opencode'
+alias zj='zellij'

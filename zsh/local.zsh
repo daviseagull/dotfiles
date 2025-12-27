@@ -16,6 +16,9 @@ export MAVEN_USER_HOME="${XDG_CONFIG_HOME}/maven"
 export JAVA_HOME=$(/usr/libexec/java_home -v 11)
 export PATH="$JAVA_HOME/bin:$PATH"
 
+# NODE
+export PATH="/opt/homebrew/bin/node:$PATH"
+
 # NVM
 export NVM_DIR="$XDG_CONFIG_HOME/.nvm"
     [ -s "$HOMEBREW_PREFIX/opt/nvm/nvm.sh" ] && \. "$HOMEBREW_PREFIX/opt/nvm/nvm.sh" # This loads nvm
@@ -35,6 +38,9 @@ eval "$(pyenv init - zsh)"
 
 # AWS SAM
 export SAM_CLI_TELEMETRY=0
+
+# 1PASSWORD SSH
+export SSH_AUTH_SOCK=~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock
 
 # PATH
 export PATH="$HOME/.local/bin:$PATH"

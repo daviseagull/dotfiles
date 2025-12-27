@@ -3,7 +3,8 @@ vim.g.maplocalleader = "\\"
 
 -- FZF
 vim.keymap.set('n', '<leader>ff', '<cmd>FzfLua files<CR>', { desc = "Files" })
-vim.keymap.set('n', '<leader>fg', '<cmd>FzfLua live_grep<CR>', { desc = "Grep" })
+vim.keymap.set('n', '<leader>fd', '<cmd>FzfLua live_grep<CR>', { desc = "Grep" })
+vim.keymap.set('n', '<leader>fb', '<cmd>FzfLua blines<CR>', { desc = "Grep Buffer" })
 vim.keymap.set('n', "<leader>b", "<cmd>FzfLua buffers sort_mru=true sort_lastused=true<cr>", { desc = "Buffers" })
 vim.keymap.set('n', "<leader><tab><tab>", "<cmd>FzfLua tabs<cr>", { desc = "Tabs" })
 

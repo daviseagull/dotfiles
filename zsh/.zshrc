@@ -10,7 +10,6 @@ plugins=(
   opentofu
   podman
   zoxide
-  fnm
   zsh-autosuggestions
   zsh-syntax-highlighting
   starship
@@ -18,6 +17,10 @@ plugins=(
 
 # Source Oh-My-Zsh
 source $ZSH/oh-my-zsh.sh
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$(brew --prefix nvm)/nvm.sh" ] && . "$(brew --prefix nvm)/nvm.sh"
+[ -s "$(brew --prefix nvm)/etc/bash_completion.d/nvm" ] && . "$(brew --prefix nvm)/etc/bash_completion.d/nvm"
 
 # Private configurations (if they exist)
 [[ -f ~/.config/zsh/private.zsh ]] && source ~/.config/zsh/private.zsh
