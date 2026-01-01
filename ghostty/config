@@ -1,22 +1,14 @@
 # Keybinds
-keybind = global:ctrl+grave_accent=toggle_quick_terminal
-keybind = shift+enter=text:\n
+# keybind = global:ctrl+grave_accent=toggle_quick_terminal
 
-# Theme configuration
 theme = Rose Pine Moon
 
-# Font configuration for optimal quality
-font-family = "Maple Mono NF"
+font-family = Maple Mono NF
 font-size = 16
-font-feature = -calt,-liga,-dlig
 
-# Window and visual appearance
-title = "Ghostty"
+title = Ghostty
 
-# macOS specific enhancements
 macos-titlebar-proxy-icon = hidden
-macos-non-native-fullscreen = false
 macos-option-as-alt = true
 
-# Mouse and interaction
 mouse-hide-while-typing = true
