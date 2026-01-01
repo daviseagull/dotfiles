@@ -1,4 +1,7 @@
-# STARSHIP
+# EDITOR
+export EDITOR="hx"
+
+# # STARSHIP
 export STARSHIP_CONFIG="${XDG_CONFIG_HOME}/starship/starship.toml"
 
 # GIT
