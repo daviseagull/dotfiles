@@ -1,8 +1,16 @@
 aws/credentials
 
+codex/log/*
+codex/sessions/*
+codex/auth.json
+codex/history.jsonl
+codex/version.json
+
 zsh/private.zsh
 zsh/.zsh_history
 zsh/.zsh_sessions
+zsh/.zcompdump
+zsh/ohmyzsh
 
 nushell/history*
 

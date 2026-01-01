@@ -1,108 +1,85 @@
 {
+  "helix_mode": true,
+  "agent_ui_font_size": 16.0,
   "agent": {
-    "play_sound_when_agent_done": true,
-    "always_allow_tool_actions": true,
     "default_model": {
-      "model": "gpt-4.1",
-      "provider": "copilot_chat"
+      "provider": "copilot_chat",
+      "model": "claude-sonnet-4",
     },
-    "default_profile": "write",
-    "default_width": 450,
-    "dock": "left",
-    "inline_assistant_model": {
-      "model": "gpt-4.1",
-      "provider": "copilot_chat"
-    }
+    "model_parameters": [],
   },
-  "auto_indent_on_paste": true,
-  "autosave": "on_focus_change",
-  "base_keymap": "VSCode",
-  "buffer_font_family": "JetBrainsMonoNL Nerd Font Propo",
+  "colorize_brackets": true,
+  // "vim_mode": true,
+  "file_scan_exclusions": [
+    "node_modules",
+    "dist",
+    ".claude",
+    ".turbo",
+    "build",
+    ".git",
+    "coverage",
+    ".angular",
+    ".gradle",
+    "target",
+  ],
   "code_actions_on_format": {
     "source.organizeImports": true,
     "source.removeUnusedImports": true,
-    "source.sortImports": true
+    "source.sortImports": true,
   },
+  "features": {
+    "edit_prediction_provider": "copilot",
+  },
+  "base_keymap": "VSCode",
+  "buffer_font_size": 16.0,
   "collaboration_panel": {
-    "button": false
+    "button": false,
   },
   "confirm_quit": true,
   "current_line_highlight": "gutter",
   "edit_predictions": {
-    "mode": "subtle"
+    "mode": "subtle",
   },
-  "features": {
-    "edit_prediction_provider": "zed"
-  },
-  "file_scan_exclusions": [
-    "**/.git",
-    "**/.settings",
-    "**/.turbo",
-    "**/.DS_Store",
-    "**/.vscode",
-    "**/coverage",
-    // "**/dist",
-    "**/.angular",
-    "**/target",
-    "**/node_modules",
-    "**/.aws-sam",
-    "**/tmp"
-  ],
   "file_scan_inclusions": ["**/.env"],
-  "file_types": {
-    "Dockerfile": ["Dockerfile.*"]
+  "buffer_font_features": {
+    "calt": false,
   },
   "format_on_save": "on",
-  "formatter": "prettier",
-  "git_panel": {
-    "default_width": 250,
-    "dock": "left"
-  },
-  "icon_theme": {
-    "dark": "Colored Zed Icons Theme Dark",
-    "light": "Colored Zed Icons Theme Light",
-    "mode": "system"
-  },
   "notification_panel": {
-    "button": false
+    "button": false,
   },
   "outline_panel": {
-    "button": false
+    "button": false,
   },
   "project_panel": {
-    "default_width": 350,
+    "hide_gitignore": false,
     "dock": "right",
-    "indent_size": 12,
-    "scrollbar": {
-      "show": "never"
-    }
-  },
-  "scrollbar": {
-    "show": "auto"
   },
   "search": {
-    "button": false
+    "button": false,
   },
-  "show_edit_predictions": true,
   "tab_bar": {
-    "show_nav_history_buttons": false
+    "show_nav_history_buttons": false,
+    "show_tab_bar_buttons": false,
+  },
+  "telemetry": {
+    "diagnostics": true,
+    "metrics": true,
   },
   "terminal": {
-    "blinking": "on",
-    "default_height": 300,
-    "dock": "bottom",
-    "font_family": "JetBrainsMonoNL Nerd Font Propo",
+    "font_family": "JetBrainsMono Nerd Font Mono",
     "toolbar": {
-      "breadcrumbs": false
-    }
+      "breadcrumbs": false,
+    },
   },
   "theme": {
-    "dark": "Catppuccin Mocha",
-    "light": "Catppuccin Latte",
-    "mode": "system"
+    "dark": "Zedokai",
+    "light": "Rosé Pine Dawn",
+    "mode": "light",
   },
   "toolbar": {
     "breadcrumbs": false,
-    "quick_actions": false
-  }
+    "quick_actions": false,
+  },
+  "ui_font_size": 16.0,
 }

@@ -9,14 +9,12 @@
   {
     "context": "Workspace",
     "bindings": {
-      "cmd-shift-a": "agent::ToggleFocus"
-      // "shift shift": "file_finder::Toggle"
+      "cmd-g": ["task::Spawn", { "task_name": "start lazygit" }]
     }
   },
   {
-    "context": "Editor",
     "bindings": {
-      // "j k": ["workspace::SendKeystrokes", "escape"]
+      "cmd-alt-g": ["agent::NewExternalAgentThread", { "agent": "claude_code" }]
     }
   }
 ]
