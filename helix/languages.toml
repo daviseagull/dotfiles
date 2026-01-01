@@ -1,0 +1,124 @@
+[language-server.angular-ls]
+command = "ngserver"
+args = [
+  "--stdio",
+  "--tsProbeLocations",
+  "$(pnpm -g root)",
+  "--ngProbeLocations",
+  "$(pnpm -g root)",
+]
+
+[language-server.eslint]
+command = "vscode-eslint-language-server"
+args = ["--stdio"]
+
+[language-server.eslint.config]
+format = true
+nodePath = ""
+run = "onType"
+validate = "on"
+experimental = { useFlatConfig = false }
+rulesCustomizations = []
+problems = { shortenToSingleLine = false }
+
+[language-server.eslint.config.codeActionOnSave]
+enable = true
+mode = "all"
+
+[language-server.eslint.config.codeAction]
+disableRuleComment = { enable = true, location = "separateLine" }
+showDocumentation = { enable = true }
+
+[language-server.eslint.config.workingDirectory]
+mode = "location"
+
+[[language]]
+name = "typescript"
+formatter = { command = "prettierd", args = ["file.ts"] }
+auto-format = true
+language-servers = ["typescript-language-server", "angular-ls", "eslint"]
+
+# JavaScript Configuration
+[[language]]
+name = "javascript"
+formatter = { command = "prettierd", args = ["file.js"] }
+auto-format = true
+language-servers = ["typescript-language-server", "eslint"]
+
+[[language]]
+name = "html"
+formatter = { command = "prettierd", args = ["file.html"] }
+auto-format = true
+language-servers = ["vscode-html-language-server", "angular-ls"]
+
+[[language]]
+name = "java"
+language-servers = ["jdtls"]
+formatter = { command = "google-java-format", args = ["-"] }
+auto-format = true
+
+[[language]]
+name = "python"
+language-servers = ["pyright", "ruff"]
+formatter = { command = "ruff", args = ["format", "-"] }
+auto-format = true
+
+[language-server.pyright.config.python.analysis]
+typeCheckingMode = "basic"
+
+[language-server.ruff]
+command = "ruff"
+args = ["server"]
+
+[[language]]
+name = "toml"
+language-servers = ["taplo"]
+formatter = { command = "taplo", args = ["fmt", "-"] }
+auto-format = true
+
+[language-server.yaml-language-server.config.yaml]
+validation = true
+completion = true
+hover = true
+
+[language-server.yaml-language-server.config.yaml.schemas]
+"https://json.schemastore.org/github-workflow.json" = ".github/workflows/*.{yml,yaml}"
+"https://json.schemastore.org/github-action.json" = "action.{yml,yaml}"
+"https://json.schemastore.org/dependabot-2.0.json" = ".github/dependabot.{yml,yaml}"
+"https://json.schemastore.org/prettierrc.json" = ".prettierrc.{yml,yaml}"
+"https://json.schemastore.org/eslintrc.json" = ".eslintrc.{yml,yaml}"
+
+[[language]]
+name = "yaml"
+language-servers = ["yaml-language-server"]
+formatter = { command = "prettierd", args = ["file.yaml"] }
+auto-format = true
+
+[[language]]
+name = "dockerfile"
+language-servers = ["docker-langserver"]
+auto-format = true
+
+[[language]]
+name = "docker-compose"
+language-servers = ["docker-compose-langserver", "yaml-language-server"]
+formatter = { command = "prettierd", args = ["file.yaml"] }
+auto-format = true
+
+[[language]]
+name = "hcl"
+language-servers = ["terraform-ls"]
+formatter = { command = "terraform", args = ["fmt", "-"] }
+auto-format = true
+
+[[language]]
+name = "tfvars"
+language-servers = ["terraform-ls"]
+formatter = { command = "terraform", args = ["fmt", "-"] }
+auto-format = true
+
+[[language]]
+name = "json"
+language-servers = ["vscode-json-language-server"]
+formatter = { command = "prettierd", args = ["file.json"] }
+auto-format = true

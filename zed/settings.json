@@ -1,4 +1,5 @@
 {
+  "helix_mode": true,
   "agent_ui_font_size": 16.0,
   "agent": {
     "default_model": {
