@@ -19,6 +19,22 @@ return {
     window = {
       position = 'right',
     },
+    default_component_configs = {
+      git_status = {
+        symbols = {
+          -- Change these to empty strings to hide the icons
+          added     = "",
+          modified  = "",
+          deleted   = "",
+          renamed   = "",
+          untracked = "",
+          ignored   = "",
+          unstaged  = "",
+          staged    = "",
+          conflict  = "",
+        },
+      },
+    },
     filesystem = {
       window = {
         mappings = {
