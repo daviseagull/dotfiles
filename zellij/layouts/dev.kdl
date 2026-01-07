@@ -1,5 +1,5 @@
 layout {
-    default_tab_template {
+   default_tab_template {
         pane size=1 borderless=true {
             plugin location="zellij:tab-bar"
         }
@@ -10,17 +10,18 @@ layout {
     }
     tab name="Editor" focus=true {
         pane stacked=true {
-           pane expanded=true command="hx" name="Helix"
+           pane expanded=true command="nvim" name="Nvim"
            pane name="Terminal"
         }    
     }
-    tab name="OpenCode" {
-        pane command="opencode"
+    tab name="OpenCode"  {
+        pane command="opencode" name="OpenCode"
     }
     tab name="LazyGit" {
-        pane command="lazygit"
+        pane command="lazygit" name="LazyGit"
     }
     tab name="Shell" {
-        pane 
+        pane
+        pane
     }
 }
