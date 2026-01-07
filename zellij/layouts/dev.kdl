@@ -9,9 +9,9 @@ layout {
         }
     }
     tab name="Editor" focus=true {
-        pane stacked=true {
-           pane expanded=true command="nvim" name="Nvim"
-           pane name="Terminal"
+        pane split_direction="horizontal" {
+           pane size="75%" command="nvim" name="Nvim"
+           pane size="25%" name="Terminal"
         }    
     }
     tab name="OpenCode"  {

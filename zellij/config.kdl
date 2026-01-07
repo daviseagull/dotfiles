@@ -19,3 +19,66 @@ theme "rose-pine-moon"
 show_startup_tips false
 
 copy_command "pbcopy"
+
+// Unbind Ctrl+hjkl so they pass through to Neovim
+// Unbind Alt+arrows so they pass through for terminal word navigation
+keybinds {
+    normal {
+        unbind "Ctrl h"
+        unbind "Ctrl j"
+        unbind "Ctrl k"
+        unbind "Ctrl l"
+        
+        // Direct tab switching without entering tab mode
+        bind "Alt 1" { GoToTab 1; }
+        bind "Alt 2" { GoToTab 2; }
+        bind "Alt 3" { GoToTab 3; }
+        bind "Alt 4" { GoToTab 4; }
+        bind "Alt 5" { GoToTab 5; }
+        bind "Alt 6" { GoToTab 6; }
+        bind "Alt 7" { GoToTab 7; }
+        bind "Alt 8" { GoToTab 8; }
+        bind "Alt 9" { GoToTab 9; }
+    }
+    shared_except "locked" {
+        unbind "Alt Left"
+        unbind "Alt Right"
+        unbind "Alt Up"
+        unbind "Alt Down"
+        unbind "Alt h"
+        unbind "Alt j"
+        unbind "Alt k"
+        unbind "Alt l"
+        unbind "Alt f"
+        unbind "Alt n"
+    }
+    
+    // Auto-exit pane mode after navigation
+    pane {
+        bind "h" { MoveFocus "Left"; SwitchToMode "Normal"; }
+        bind "j" { MoveFocus "Down"; SwitchToMode "Normal"; }
+        bind "k" { MoveFocus "Up"; SwitchToMode "Normal"; }
+        bind "l" { MoveFocus "Right"; SwitchToMode "Normal"; }
+        bind "Left" { MoveFocus "Left"; SwitchToMode "Normal"; }
+        bind "Down" { MoveFocus "Down"; SwitchToMode "Normal"; }
+        bind "Up" { MoveFocus "Up"; SwitchToMode "Normal"; }
+        bind "Right" { MoveFocus "Right"; SwitchToMode "Normal"; }
+    }
+    
+    // Auto-exit tab mode after navigation
+    tab {
+        bind "h" { GoToPreviousTab; SwitchToMode "Normal"; }
+        bind "l" { GoToNextTab; SwitchToMode "Normal"; }
+        bind "Left" { GoToPreviousTab; SwitchToMode "Normal"; }
+        bind "Right" { GoToNextTab; SwitchToMode "Normal"; }
+        bind "1" { GoToTab 1; SwitchToMode "Normal"; }
+        bind "2" { GoToTab 2; SwitchToMode "Normal"; }
+        bind "3" { GoToTab 3; SwitchToMode "Normal"; }
+        bind "4" { GoToTab 4; SwitchToMode "Normal"; }
+        bind "5" { GoToTab 5; SwitchToMode "Normal"; }
+        bind "6" { GoToTab 6; SwitchToMode "Normal"; }
+        bind "7" { GoToTab 7; SwitchToMode "Normal"; }
+        bind "8" { GoToTab 8; SwitchToMode "Normal"; }
+        bind "9" { GoToTab 9; SwitchToMode "Normal"; }
+    }
+}
