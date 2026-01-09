@@ -16,22 +16,29 @@ return {
     { '<leader>E', ':Neotree reveal<CR>', desc = 'Reveal file in NeoTree', silent = true },
   },
   opts = {
+    hide_root_node = true,
+    retain_hidden_root_indent = false,
     window = {
       position = 'right',
     },
     default_component_configs = {
+      indent = {
+        indent_size = 1,
+        padding = 1,
+        with_markers = false,
+      },
       git_status = {
         symbols = {
           -- Change these to empty strings to hide the icons
-          added     = "",
-          modified  = "",
-          deleted   = "",
-          renamed   = "",
-          untracked = "",
-          ignored   = "",
-          unstaged  = "",
-          staged    = "",
-          conflict  = "",
+          added = '',
+          modified = '',
+          deleted = '',
+          renamed = '',
+          untracked = '',
+          ignored = '',
+          unstaged = '',
+          staged = '',
+          conflict = '',
         },
       },
     },
@@ -42,6 +49,14 @@ return {
           ['h'] = 'close_node',
           ['l'] = 'open',
         },
+      },
+    },
+    event_handlers = {
+      {
+        event = 'neo_tree_buffer_enter',
+        handler = function()
+          vim.opt_local.statusline = ' '
+        end,
       },
     },
   },
