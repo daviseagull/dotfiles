@@ -6,22 +6,6 @@
 --  See `:help hlsearch`
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
--- Diagnostic keymaps - toggle quickfix list
-vim.keymap.set('n', '<leader>q', function()
-  local qf_exists = false
-  for _, win in pairs(vim.fn.getwininfo()) do
-    if win.quickfix == 1 then
-      qf_exists = true
-      break
-    end
-  end
-  if qf_exists then
-    vim.cmd 'cclose'
-  else
-    vim.diagnostic.setloclist()
-  end
-end, { desc = '[Q]uickfix diagnostics toggle' })
-
 -- Disable arrow keys in normal mode (training wheels)
 vim.keymap.set('n', '<left>', '<cmd>echo "Use h to move!!"<CR>')
 vim.keymap.set('n', '<right>', '<cmd>echo "Use l to move!!"<CR>')

@@ -7,6 +7,40 @@ return {
   },
   config = function()
     -- =====================================================================
+    -- Completion (mini.completion)
+    -- Lightweight autocompletion with LSP support
+    -- =====================================================================
+    require('mini.completion').setup {
+      delay = { completion = 100, info = 100, signature = 50 },
+      lsp_completion = { source_func = 'completefunc' },
+    }
+
+    -- Keymaps: Arrows to navigate, Tab to select
+    vim.keymap.set('i', '<Tab>', function()
+      if vim.fn.pumvisible() == 1 then
+        return '<C-y>' -- Accept selection
+      else
+        return '<Tab>' -- Normal tab
+      end
+    end, { expr = true })
+
+    vim.keymap.set('i', '<Down>', function()
+      if vim.fn.pumvisible() == 1 then
+        return '<C-n>'
+      else
+        return '<Down>'
+      end
+    end, { expr = true })
+
+    vim.keymap.set('i', '<Up>', function()
+      if vim.fn.pumvisible() == 1 then
+        return '<C-p>'
+      else
+        return '<Up>'
+      end
+    end, { expr = true })
+
+    -- =====================================================================
     -- Text Objects (mini.ai)
     -- Better Around/Inside textobjects
     -- Examples:
@@ -219,6 +253,7 @@ return {
         { mode = 'n', keys = '<Leader>f', desc = '+[F]ind' },
         { mode = 'n', keys = '<Leader>l', desc = '+[L]SP' },
         { mode = 'n', keys = '<Leader>t', desc = '+[T]oggle' },
+        { mode = 'n', keys = '<Leader>x', desc = '+Diagnostics' },
 
         -- Enhance built-in clues
         clue.gen_clues.builtin_completion(),

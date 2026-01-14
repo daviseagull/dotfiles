@@ -29,8 +29,7 @@ return {
       -- Schema information for JSON files
       'b0o/schemastore.nvim',
 
-      -- Allows extra capabilities provided by blink.cmp
-      'saghen/blink.cmp',
+
     },
     config = function()
       -- This function gets run when an LSP attaches to a particular buffer
@@ -170,8 +169,8 @@ return {
         },
       }
 
-      -- Get capabilities from blink.cmp
-      local capabilities = require('blink.cmp').get_lsp_capabilities()
+      -- LSP capabilities for completion
+      local capabilities = vim.lsp.protocol.make_client_capabilities()
 
       -- Language server configurations
       local servers = {
