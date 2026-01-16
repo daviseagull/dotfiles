@@ -1,7 +1,0 @@
-[plugin]
-deps = []
-
-[[flavor.deps]]
-use = "Mintass/rose-pine-moon"
-rev = "aa2d937"
-hash = "f864fd523f0b3c65079d434eb537cdef"

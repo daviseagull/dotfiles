@@ -1,5 +1,4 @@
 {
-  "helix_mode": true,
   "agent_ui_font_size": 16.0,
   "agent": {
     "default_model": {
@@ -9,7 +8,6 @@
     "model_parameters": [],
   },
   "colorize_brackets": true,
-  // "vim_mode": true,
   "file_scan_exclusions": [
     "node_modules",
     "dist",
@@ -82,4 +80,12 @@
     "quick_actions": false,
   },
   "ui_font_size": 16.0,
+  "vim_mode": true,
+  "vim": {
+    "use_system_clipboard": "never",
+    "toggle_relative_line_numbers": true,
+  },
+  "which_key": {
+    "enabled": true,
+  },
 }

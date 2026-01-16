@@ -58,8 +58,8 @@ vim.o.inccommand = 'split'
 -- Show which line your cursor is on
 vim.o.cursorline = true
 
--- Minimal number of screen lines to keep above and below the cursor
-vim.o.scrolloff = 10
+-- Keep cursor centered vertically in the screen
+vim.o.scrolloff = 999
 
 -- Remove ~ from empty lines in gutter
 vim.o.fillchars = 'eob: '

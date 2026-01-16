@@ -6,6 +6,13 @@ codex/auth.json
 codex/history.jsonl
 codex/version.json
 
+fish/completions/*
+fish/conf.d/*
+fish/functions/*
+fish/themes/*
+fish/fish_plugins
+fish/fish_variables
+
 zsh/private.zsh
 zsh/.zsh_history
 zsh/.zsh_sessions
