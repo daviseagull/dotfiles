@@ -1,0 +1,25 @@
+/*******************************************************************************
+ * Rose Pine Moon - Rofi Configuration
+ * Minimalist Application Launcher Theme
+ *******************************************************************************/
+
+configuration {
+    modi: "drun,run,window";
+    show-icons: true;
+    icon-theme: "rose-pine-moon";
+    display-drun: " ";
+    display-run: " ";
+    display-window: " ";
+    drun-display-format: "{name}";
+    window-format: "{w} · {c} · {t}";
+    font: "Iosevka NF 12";
+    
+    /* Performance */
+    lazy-grab: true;
+    matching: "fuzzy";
+    
+    /* Wayland specific */
+    dpi: 1;
+}
+
+@theme "rose-pine-moon"

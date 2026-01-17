@@ -1,0 +1,240 @@
+/* ============================================ */
+/* Rose Pine Moon - Waybar Theme               */
+/* Minimalist & Aesthetic                      */
+/* ============================================ */
+
+/* Rose Pine Moon Color Palette */
+@define-color base #232136;
+@define-color surface #2a273f;
+@define-color overlay #393552;
+@define-color muted #6e6a86;
+@define-color subtle #908caa;
+@define-color text #e0def4;
+@define-color love #eb6f92;
+@define-color gold #f6c177;
+@define-color rose #ea9a97;
+@define-color pine #3e8fb0;
+@define-color foam #9ccfd8;
+@define-color iris #c4a7e7;
+@define-color highlight_low #2a283e;
+@define-color highlight_med #44415a;
+@define-color highlight_high #56526e;
+
+/* ============================================ */
+/* Global Styles                               */
+/* ============================================ */
+
+* {
+    font-family: "Iosevka NF", "Font Awesome 6 Free", sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    min-height: 0;
+}
+
+window#waybar {
+    background: transparent;
+}
+
+/* Main bar container */
+#waybar {
+    background: alpha(@base, 0.85);
+    color: @text;
+    border-radius: 12px;
+    margin: 10px 15px 0px 15px;
+    border: 2px solid @highlight_med;
+    transition: all 0.3s ease;
+}
+
+/* ============================================ */
+/* Module Defaults                             */
+/* ============================================ */
+
+#workspaces,
+#window,
+#clock,
+#pulseaudio,
+#network,
+#tray,
+#custom-media {
+    padding: 0 12px;
+    margin: 4px 0;
+    color: @text;
+    transition: all 0.2s ease;
+}
+
+/* ============================================ */
+/* Workspaces                                  */
+/* ============================================ */
+
+#workspaces {
+    padding: 0 6px;
+}
+
+#workspaces button {
+    padding: 0 8px;
+    margin: 0 2px;
+    color: @subtle;
+    background: transparent;
+    border: none;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+#workspaces button.active {
+    color: @iris;
+    background: alpha(@iris, 0.15);
+    font-weight: 700;
+}
+
+#workspaces button.urgent {
+    color: @love;
+    background: alpha(@love, 0.15);
+}
+
+#workspaces button:hover {
+    color: @rose;
+    background: alpha(@rose, 0.1);
+}
+
+/* ============================================ */
+/* Window Title                                */
+/* ============================================ */
+
+#window {
+    color: @subtle;
+    font-weight: 400;
+    font-style: italic;
+    margin: 0 20px;
+}
+
+#window.empty {
+    padding: 0;
+    margin: 0;
+}
+
+/* ============================================ */
+/* Clock                                       */
+/* ============================================ */
+
+#clock {
+    color: @foam;
+    font-weight: 600;
+    border-left: 2px solid @highlight_med;
+    padding-left: 16px;
+}
+
+#clock:hover {
+    color: @text;
+    background: alpha(@foam, 0.1);
+    border-radius: 8px;
+}
+
+/* ============================================ */
+/* Audio                                       */
+/* ============================================ */
+
+#pulseaudio {
+    color: @rose;
+    border-left: 2px solid @highlight_med;
+    padding-left: 16px;
+}
+
+#pulseaudio:hover {
+    background: alpha(@rose, 0.1);
+    border-radius: 8px;
+}
+
+#pulseaudio.muted {
+    color: @muted;
+}
+
+/* ============================================ */
+/* Network                                     */
+/* ============================================ */
+
+#network {
+    color: @pine;
+}
+
+#network:hover {
+    background: alpha(@pine, 0.1);
+    border-radius: 8px;
+}
+
+#network.disconnected {
+    color: @love;
+}
+
+/* ============================================ */
+/* System Tray                                 */
+/* ============================================ */
+
+#tray {
+    padding: 0 8px;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+}
+
+#tray menu {
+    background: @surface;
+    color: @text;
+    border: 2px solid @highlight_med;
+    border-radius: 8px;
+    padding: 4px;
+}
+
+#tray menu menuitem {
+    border-radius: 6px;
+    padding: 6px 10px;
+}
+
+#tray menu menuitem:hover {
+    background: @overlay;
+}
+
+/* ============================================ */
+/* Media Player                                */
+/* ============================================ */
+
+#custom-media {
+    color: @gold;
+    border-left: 2px solid @highlight_med;
+    padding-left: 16px;
+    margin-right: 8px;
+}
+
+#custom-media:hover {
+    background: alpha(@gold, 0.1);
+    border-radius: 8px;
+}
+
+#custom-media.playing {
+    color: @foam;
+}
+
+#custom-media.paused {
+    color: @muted;
+}
+
+/* ============================================ */
+/* Tooltips                                    */
+/* ============================================ */
+
+tooltip {
+    background: alpha(@surface, 0.95);
+    border: 2px solid @highlight_med;
+    border-radius: 8px;
+    color: @text;
+    padding: 8px 12px;
+}
+
+tooltip label {
+    color: @text;
+    padding: 4px;
+}

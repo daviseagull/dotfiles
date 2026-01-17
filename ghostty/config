@@ -1,15 +1,52 @@
-# Keybinds
-# keybind = global:ctrl+grave_accent=toggle_quick_terminal
+
+############################
+# Font (Iosevka NF)
+############################
+
+font-family = Iosevka NF
+
+# Enable common Iosevka features
+font-feature = calt
+font-feature = liga
+font-feature = ss01
+font-feature = ss02
+font-feature = zero
+
+# Better readability on Linux font rendering
+font-thicken = true
+
+############################
+# Theme – Rosé Pine Moon
+############################
 
 theme = Rose Pine Moon
 
-font-family = Maple Mono NF
-font-size = 16
+background-opacity = 0.9
 
-title = Ghostty
+# Blur works on Wayland compositors (Hyprland, GNOME, KDE)
+background-blur = 12
 
-macos-titlebar-proxy-icon = hidden
-macos-option-as-alt = true
+############################
+# Window & Layout
+############################
 
+window-padding-x = 12
+window-padding-y = 10
+
+window-decoration = auto
+window-vsync = true
+
+quit-after-last-window-closed = true
+
+############################
+# Scrolling
+############################
+
+scrollback-limit = 25000
+
+############################
+# Shell Integration
+############################
+
+shell-integration = detect
 mouse-hide-while-typing = true
-
