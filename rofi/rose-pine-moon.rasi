@@ -36,7 +36,7 @@
 
 window {
     transparency: "real";
-    background-color: @base;
+    background-color: #232136CC;
     border: 2px solid;
     border-color: @highlight-med;
     border-radius: 12px;
@@ -61,7 +61,7 @@ mainbox {
  *******************************************************************************/
 
 inputbar {
-    background-color: @surface;
+    background-color: #2a273f99;
     border: 2px solid;
     border-color: @highlight-med;
     border-radius: 10px;

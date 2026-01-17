@@ -12,8 +12,8 @@ configuration {
     display-window: " ";
     drun-display-format: "{name}";
     window-format: "{w} · {c} · {t}";
-    font: "Iosevka NF 12";
-    
+    font: "Iosevka NF 18";
+
     /* Performance */
     lazy-grab: true;
     matching: "fuzzy";

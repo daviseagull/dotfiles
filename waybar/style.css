@@ -32,12 +32,12 @@
 }
 
 window#waybar {
-    background: transparent;
+    background: alpha(@base, 0.5);
 }
 
 /* Main bar container */
 #waybar {
-    background: alpha(@base, 0.85);
+    background: alpha(@base, 0.5);
     color: @text;
     border-radius: 12px;
     margin: 10px 15px 0px 15px;
@@ -53,9 +53,11 @@ window#waybar {
 #window,
 #clock,
 #pulseaudio,
+#custom-brightness,
 #network,
 #tray,
-#custom-media {
+#custom-media,
+#custom-power {
     padding: 0 12px;
     margin: 4px 0;
     color: @text;
@@ -137,6 +139,7 @@ window#waybar {
     color: @rose;
     border-left: 2px solid @highlight_med;
     padding-left: 16px;
+    min-width: 44px;
 }
 
 #pulseaudio:hover {
@@ -146,6 +149,22 @@ window#waybar {
 
 #pulseaudio.muted {
     color: @muted;
+}
+
+/* ============================================ */
+/* Brightness                                  */
+/* ============================================ */
+
+#custom-brightness {
+    color: @gold;
+    border-left: 2px solid @highlight_med;
+    padding-left: 16px;
+    min-width: 44px;
+}
+
+#custom-brightness:hover {
+    background: alpha(@gold, 0.1);
+    border-radius: 8px;
 }
 
 /* ============================================ */
@@ -220,6 +239,26 @@ window#waybar {
 
 #custom-media.paused {
     color: @muted;
+}
+
+/* ============================================ */
+/* Power Menu                                  */
+/* ============================================ */
+
+#custom-power {
+    color: @love;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 0 8px;
+    margin: 4px 8px 4px 2px;
+    border-radius: 8px;
+    min-width: 20px;
+}
+
+#custom-power:hover {
+    background: alpha(@love, 0.15);
+    border-radius: 8px;
+    color: @text;
 }
 
 /* ============================================ */
