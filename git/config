@@ -2,7 +2,7 @@
 [user]
 	name = "Davi Seagull"
 	email = "daviseagull@icloud.com"
-	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICrIMlHFG9U0QiJTZfW9HD7+jcT5999UmjNzatF26GcF
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIME/81OI1jcDEpusD1LwaXfZyGCeFy75fQeiA3BvVFek
 
 [filter "lfs"]
 	clean = git-lfs clean -- %f
@@ -13,3 +13,9 @@
 [push]
 	autoSetupRemote = true
 
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	program = /opt/1Password/op-ssh-sign
+[commit]
+	gpgsign = true
