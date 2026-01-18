@@ -4,14 +4,14 @@
 # Uses rofi to display power options
 
 # Power options
-shutdown="󰐥  Shutdown"
-reboot="󰜉  Restart"
-logout="󰍃  Logout"
-suspend="󰤄  Suspend"
-lock="  Lock"
+shutdown="󰐥	Shutdown"
+reboot="󰜉	Restart"
+logout="󰍃	Logout"
+suspend="󰤄	Suspend"
+lock="󰌾	Lock"
 
 # Show rofi menu and get selection
-selected=$(echo -e "$lock\n$logout\n$suspend\n$reboot\n$shutdown" | rofi -dmenu -i -p "Power Menu" -theme-str 'window {width: 300px;}')
+selected=$(echo -e "$lock\n$logout\n$suspend\n$reboot\n$shutdown" | rofi -dmenu -i -theme ~/.config/rofi/rose-pine-moon-menu.rasi -p "")
 
 # Execute based on selection
 case $selected in

@@ -8,13 +8,14 @@
 	// Module layout
 	"modules-left": [
 		"hyprland/workspaces",
+		"tray",
 		"custom/media"
 	],
 	"modules-center": [
 		"hyprland/window"
 	],
 	"modules-right": [
-		"tray",
+		"custom/wireless",
 		"custom/brightness",
 		"pulseaudio",
 		"clock",
@@ -82,7 +83,9 @@
 		"on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
 		"on-click-right": "pavucontrol",
 		"tooltip-format": "{desc}\nVolume: {volume}%",
-		"ignored-sinks": ["Easy Effects Sink"],
+		"ignored-sinks": [
+			"Easy Effects Sink"
+		],
 		"max-volume": 150
 	},
 	"custom/brightness": {
@@ -118,5 +121,15 @@
 		"format": "󰐥",
 		"on-click": "~/.config/waybar/scripts/power-menu.sh",
 		"tooltip": false
+	},
+	"custom/wireless": {
+		"format": "{}",
+		"return-type": "json",
+		"exec": "~/.config/waybar/scripts/wireless-status.sh",
+		"on-click": "~/.config/waybar/scripts/wireless-menu.sh",
+		"on-click-middle": "~/.config/waybar/scripts/wifi-menu.sh",
+		"on-click-right": "~/.config/waybar/scripts/bluetooth-menu.sh",
+		"interval": 5,
+		"signal": 9
 	}
 }

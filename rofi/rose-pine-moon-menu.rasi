@@ -1,0 +1,189 @@
+/*******************************************************************************
+ * Rose Pine Moon Theme for Rofi - Menu Variant
+ * For Waybar wireless/power menus
+ *******************************************************************************/
+
+* {
+    /* Rose Pine Moon Color Palette */
+    base:           #232136;
+    surface:        #2a273f;
+    overlay:        #393552;
+    muted:          #6e6a86;
+    subtle:         #908caa;
+    text:           #e0def4;
+    love:           #eb6f92;
+    gold:           #f6c177;
+    rose:           #ea9a97;
+    pine:           #3e8fb0;
+    foam:           #9ccfd8;
+    iris:           #c4a7e7;
+    highlight-low:  #2a283e;
+    highlight-med:  #44415a;
+    highlight-high: #56526e;
+    
+    /* Component Colors */
+    background-color: transparent;
+    text-color: @text;
+    
+    accent: @iris;
+    urgent: @love;
+    active: @foam;
+}
+
+/*******************************************************************************
+ * Main Window
+ *******************************************************************************/
+
+window {
+    transparency: "real";
+    background-color: #232136CC;
+    border: 2px solid;
+    border-color: @highlight-med;
+    border-radius: 12px;
+    width: 400px;
+    padding: 16px;
+    location: center;
+    anchor: center;
+}
+
+/*******************************************************************************
+ * Main Box
+ *******************************************************************************/
+
+mainbox {
+    background-color: transparent;
+    spacing: 12px;
+    children: [ inputbar, listview ];
+}
+
+/*******************************************************************************
+ * Input Bar
+ *******************************************************************************/
+
+inputbar {
+    background-color: #2a273f99;
+    border: 2px solid;
+    border-color: @highlight-med;
+    border-radius: 10px;
+    padding: 12px 16px;
+    spacing: 12px;
+    children: [ prompt, entry ];
+}
+
+prompt {
+    background-color: transparent;
+    text-color: @iris;
+    font: "Iosevka NF Bold 13";
+    enabled: false;
+}
+
+entry {
+    background-color: transparent;
+    text-color: @text;
+    placeholder: "Search...";
+    placeholder-color: @muted;
+    cursor: text;
+}
+
+/*******************************************************************************
+ * List View
+ *******************************************************************************/
+
+listview {
+    background-color: transparent;
+    columns: 1;
+    lines: 8;
+    spacing: 4px;
+    cycle: false;
+    dynamic: true;
+    layout: vertical;
+    scrollbar: false;
+}
+
+/*******************************************************************************
+ * Elements - Adjusted padding for menu items with icons
+ *******************************************************************************/
+
+element {
+    background-color: transparent;
+    text-color: @text;
+    border-radius: 8px;
+    padding: 10px 12px 10px 12px;
+    spacing: 12px;
+}
+
+element normal.normal {
+    background-color: transparent;
+    text-color: @text;
+}
+
+element normal.urgent {
+    background-color: transparent;
+    text-color: @urgent;
+}
+
+element normal.active {
+    background-color: transparent;
+    text-color: @active;
+}
+
+element selected.normal {
+    background-color: @overlay;
+    text-color: @accent;
+    border: 2px solid;
+    border-color: @accent;
+}
+
+element selected.urgent {
+    background-color: @overlay;
+    text-color: @urgent;
+    border: 2px solid;
+    border-color: @urgent;
+}
+
+element selected.active {
+    background-color: @overlay;
+    text-color: @active;
+    border: 2px solid;
+    border-color: @active;
+}
+
+element-icon {
+    background-color: transparent;
+    size: 0px;
+    cursor: pointer;
+}
+
+element-text {
+    background-color: transparent;
+    text-color: inherit;
+    cursor: pointer;
+    vertical-align: 0.5;
+    horizontal-align: 0.0;
+}
+
+/*******************************************************************************
+ * Message
+ *******************************************************************************/
+
+message {
+    background-color: transparent;
+    border: 2px solid;
+    border-color: @highlight-med;
+    border-radius: 10px;
+    padding: 12px;
+}
+
+textbox {
+    background-color: transparent;
+    text-color: @text;
+    vertical-align: 0.5;
+}
+
+error-message {
+    background-color: @base;
+    border: 2px solid;
+    border-color: @love;
+    border-radius: 10px;
+    padding: 16px;
+}

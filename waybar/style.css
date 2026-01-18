@@ -57,7 +57,8 @@ window#waybar {
 #network,
 #tray,
 #custom-media,
-#custom-power {
+#custom-power,
+#custom-wireless {
     padding: 0 12px;
     margin: 4px 0;
     color: @text;
@@ -200,23 +201,6 @@ window#waybar {
     -gtk-icon-effect: highlight;
 }
 
-#tray menu {
-    background: @surface;
-    color: @text;
-    border: 2px solid @highlight_med;
-    border-radius: 8px;
-    padding: 4px;
-}
-
-#tray menu menuitem {
-    border-radius: 6px;
-    padding: 6px 10px;
-}
-
-#tray menu menuitem:hover {
-    background: @overlay;
-}
-
 /* ============================================ */
 /* Media Player                                */
 /* ============================================ */
@@ -259,6 +243,38 @@ window#waybar {
     background: alpha(@love, 0.15);
     border-radius: 8px;
     color: @text;
+}
+
+/* ============================================ */
+/* Wireless Module                             */
+/* ============================================ */
+
+#custom-wireless {
+    color: @foam;
+    border-left: 2px solid @highlight_med;
+    padding-left: 16px;
+    min-width: 30px;
+}
+
+#custom-wireless:hover {
+    background: alpha(@foam, 0.1);
+    border-radius: 8px;
+}
+
+#custom-wireless.both-on {
+    color: @foam;
+}
+
+#custom-wireless.wifi-on {
+    color: @foam;
+}
+
+#custom-wireless.bt-on {
+    color: @foam;
+}
+
+#custom-wireless.both-off {
+    color: @muted;
 }
 
 /* ============================================ */
